@@ -93,7 +93,7 @@ public class Interactive_Story_App {
 
     private static void printMainMenu() {
         DelayPrinter.slowPrint("======================================");
-        DelayPrinter.slowPrint("      INTERACTIVE STORY GAME");
+        DelayPrinter.slowPrint("       INTERACTIVE STORY GAME");
         DelayPrinter.slowPrint("======================================");
         DelayPrinter.slowPrint("1. STORY ONE");
         DelayPrinter.slowPrint("2. Instructions");
@@ -112,12 +112,12 @@ public class Interactive_Story_App {
     }
 
     private static void showInstructions() {
-        DelayPrinter.slowPrint("\n=========== INSTRUCTIONS ===========");
-        DelayPrinter.slowPrint("• This is a branching text adventure.");
-        DelayPrinter.slowPrint("• Read the story and choose an option when prompted.");
-        DelayPrinter.slowPrint("• Your choices affect the direction and ending of the game.");
-        DelayPrinter.slowPrint("• Type the number of the option and press ENTER.");
-        DelayPrinter.slowPrint("• At any choice prompt, type 0 to return to the main menu.\n");
+        DelayPrinter.slowPrint("\n====================== INSTRUCTIONS ========================");
+        DelayPrinter.slowPrint("+ This is a branching text adventure.");
+        DelayPrinter.slowPrint("+ Read the story and choose an option when prompted.");
+        DelayPrinter.slowPrint("+ Your choices affect the direction and ending of the game.");
+        DelayPrinter.slowPrint("+ Type the number of the option and press ENTER.");
+        DelayPrinter.slowPrint("+ At any choice prompt, type 0 to return to the main menu.\n");
         DelayPrinter.slowPrint("Enjoy the story!\n");
     }
 }
@@ -217,15 +217,14 @@ class Path1 extends Path {
 
     @Override
     public void playPath() {
-        printSeparator("--- The Forest Beckons ---");
-        DelayPrinter.slowPrint("\n--- The Forest Beckons ---");
+        printSeparator(" --- The Forest Beckons ---");
         DelayPrinter.slowPrint(
-                "Makiling's forest is shrouded in darkness. Mist curls around your feet and drifts over the twisted roots. Each step echoes through the quiet woods. People speak of the guardian spirit protecting the mountain, yet your heart pushes you onward. You cannot turn back — your sister is missing, and every heartbeat calls for her.   \n");
+                "Makiling's forest is shrouded in darkness. Mist curls around your feet and drifts over the twisted roots. Each step echoes through the quiet woods. People speak of the guardian spirit protecting the mountain, yet your heart pushes you onward. You cannot turn back, your sister is missing, and every heartbeat calls for her.   \n");
 
         printMiniEvents(miniEvents);
 
         DelayPrinter.slowPrint(
-                "\nAs you move cautiously, a shiver runs down your spine. The trees seem to lean closer, watching you. You pause and listen. Far off in the forest, you hear a faint whisper of your sister’s name. You must choose: call out to her, or follow the small, flickering lights in the mist.\n");
+                "\nAs you move cautiously, a shiver runs down your spine. The trees seem to lean closer, watching you. You pause and listen. Far off in the forest, you hear a faint whisper of your sister's name. \n");
 
         DelayPrinter.slowPrint("What should you do?");
         DelayPrinter.slowPrint("1. Call out your sister's name.");
@@ -241,11 +240,9 @@ class Path1 extends Path {
     }
 
     private void callOutSister() {
-        DelayPrinter.slowPrint(
-                "\nYou drop to your knees on the cold ground. “Please, my sister is lost. I just want to find her,” you plead. The spirit watches quietly. After a moment, she gives a faint, sad smile. “Your heart is pure. Few mortals come here without greed,” she whispers. Her hand rests lightly on your forehead. Warmth spreads through you, and your vision fills with images of your sister, safe by a sparkling stream, surrounded by glowing vines and gentle, protective light.\n");
 
         DelayPrinter.slowPrint(
-                "You kneel on the cold ground. “Please, my sister is lost. I only want to find her,” you plead. The spirit watches silently. After a moment, she smiles faintly, a sad, distant smile. “Your heart is pure. Few mortals come here without greed,” she whispers. Her hand touches your forehead gently. Warmth spreads through you, and your vision fills with images of your sister, safe by a sparkling stream, surrounded by glowing vines and soft, protective light.\n");
+                "\nYou kneel on the cold ground. \"Please, my sister is lost. I only want to find her\", you plead. The spirit watches silently. After a moment, she smiles faintly, a sad, distant smile. \"Your heart is pure. Few mortals come here without greed\" she whispers. Her hand touches your forehead gently. Warmth spreads through you, and your vision fills with images of your sister, safe by a sparkling stream, surrounded by glowing vines and soft, protective light.\n");
 
         DelayPrinter.slowPrint("Your heart races, but you have choices to make:");
         DelayPrinter.slowPrint("1. Kneel and humbly ask for her help.");
@@ -265,13 +262,23 @@ class Path1 extends Path {
 
         if (choice == 1) {
             DelayPrinter.slowPrint(
-                    "\nYou fall to your knees, the cold earth beneath you. “Please, my sister is lost. I only wish to find her,” you plead. The spirit watches in silence. Moments pass, then she smiles faintly, a sad and distant smile. “Your heart is pure. Few mortals come here without greed,” she whispers. Her hand rests lightly on your forehead. Warmth spreads through you, and your vision fills with vivid images of your sister, safe beside a sparkling stream, surrounded by glowing vines and gentle, protective light.\n");
+                    "\nYou lower your head, gratitude and hope steadying your breath.\n" +
+                            "\"Please,\" you say softly, \"guide me to her.\"\n" +
+                            "The spirit's sad smile deepens. She steps back, her form beginning to fade like morning fog.\n"
+                            +
+                            "\"Then walk with trust,\" she whispers. \"The forest will answer you.\"\n" +
+                            "A warm breeze brushes past, and glowing vines part silently, revealing a narrow trail. As you take your first steps, the air grows cooler, and the spirit's presence lingers like a fading echo behind you.\n");
 
             DelayPrinter.slowPrint(
-                    "The spirit’s voice echoes in your mind: “Go. Follow the path I have shown. But never return at night again.” She fades into the mist, leaving only the gentle scent of sampaguita.\n");
+                    "The spirit's voice echoes in your mind: \"Go. Follow the path I have shown. But never return at night again.\" She fades into the mist, leaving only the gentle scent of sampaguita.\n");
         } else {
             DelayPrinter.slowPrint(
-                    "\n'“Where is she?” you shout, desperation overtaking caution. “I know you took her!” The guardian’s eyes darken, and a chilling wind sweeps through the clearing. The ground shakes beneath you. Roots burst from the soil, coiling tightly around your legs. Panic grips you, but after a tense struggle, they loosen, letting you stumble free, soaked in sweat and fear. Even as the forest grows silent again, your determination hardens — you must keep going.\n");
+                    "\nYou step forward, fear cracking through your voice.\n" +
+                            "\"Please! Just tell me where she is... I can't lose her!\"\n" +
+                            "The spirit's expression hardens for a moment, sorrow replacing her softness. The forest trembles faintly, leaves rustling though no wind blows.\n"
+                            +
+                            "\"Fear clouds the path,\" she says quietly. \"But love still leads you.\"\n" +
+                            "She raises her hand, and your vision blurs. When it clears, the spirit is gone, only a barely visible trail remains, twisting into the dark woods. Your heart pounds as you move forward, driven by desperation.\n");
         }
 
         Path2 nextPath = new Path2(playerName, input);
@@ -280,7 +287,7 @@ class Path1 extends Path {
 
     private void followLight() {
         DelayPrinter.slowPrint(
-                "\nYou stay silent, carefully moving toward the flickering lights in the mist. Each step is deliberate, the soft earth yielding beneath your feet. The glow leads you to a stone altar hidden under ancient trees. Moss covers its surface, and fruits, flowers, and pearls lie scattered around, left by travelers over many years. A faint voice whispers, “Leave an offering, and your wish will be heard.'\n");
+                "\nYou stay silent, carefully moving toward the flickering lights in the mist. Each step is deliberate, the soft earth yielding beneath your feet. The glow leads you to a stone altar hidden under ancient trees. Moss covers its surface, and fruits, flowers, and pearls lie scattered around, left by travelers over many years. A faint voice whispers, \"Leave an offering, and your wish will be heard.\"\n");
 
         DelayPrinter.slowPrint("What will you do?");
         DelayPrinter.slowPrint("1. Leave your necklace as an offering.");
@@ -299,7 +306,7 @@ class Path1 extends Path {
 
         if (choice == 1) {
             DelayPrinter.slowPrint(
-                    "\nYou kneel and place your treasured necklace — a gift from your mother — on the altar. The forest seems to breathe. The mist thickens for a moment, then clears, revealing a narrow hidden path. Hope rises within you as you step forward, feeling as if unseen eyes guide and protect you.\n");
+                    "\nYou kneel and place your treasured necklace, a gift from your mother, on the altar. The forest seems to breathe. The mist thickens for a moment, then clears, revealing a narrow hidden path. Hope rises within you as you step forward, feeling as if unseen eyes guide and protect you.\n");
         } else {
             DelayPrinter.slowPrint(
                     "\nYou pass the altar, torn between hesitation and determination. The mist thickens, and shadows flicker just out of sight. Still, a faint trail appears, calling you forward. The forest tests you, but love and the strong desire to find your sister push you onward.\n");
@@ -316,7 +323,7 @@ class Path2 extends Path {
             "A sudden flutter of wings passes overhead, leaving a faint trail of golden feathers in the air.",
             "The mist thickens, curling around the trees and narrow path, as if trying to hide your way.",
             "You feel a gentle, almost unnoticeable touch on your shoulder, though no one is there.",
-            "A distant stream gurgles, its sound blending with whispers of your sister’s name, guiding you.",
+            "A distant stream gurgles, its sound blending with whispers of your sister's name, guiding you.",
             "Faint glimmers of light move among the branches, hinting at hidden paths and secret clearings."
     };
 
@@ -327,9 +334,8 @@ class Path2 extends Path {
     @Override
     public void playPath() {
         printSeparator("--- The Hidden Trail ---");
-        DelayPrinter.slowPrint("\n--- The Hidden Trail ---");
         DelayPrinter.slowPrint(
-                "Following the trail from Path 1, the forest becomes thicker, with older, twisted trees.");
+                "Following the trail, the forest becomes thicker, with older, twisted trees.");
         DelayPrinter.slowPrint(
                 "With each step, you move deeper into the unknown. Mist wraps around your legs, and the air is filled with the scent of damp earth and flowers.\n");
 
@@ -407,7 +413,7 @@ class Path3 extends Path {
             "Golden specks of light drift slowly through the air, reflecting off the twisted tree trunks.",
             "Soft, eerie laughter echoes in the distance, reminding you of the many travelers who have passed through these woods.",
             "The uneven forest floor shifts under your feet, testing your balance and determination.",
-            "Faint whispers of your sister’s name drift through the mist, tugging at your heart."
+            "Faint whispers of your sister's name drift through the mist, tugging at your heart."
     };
 
     public Path3(String playerName, Scanner input) {
@@ -417,9 +423,8 @@ class Path3 extends Path {
     @Override
     public void playPath() {
         printSeparator("--- The Veiled Summit ---");
-        DelayPrinter.slowPrint("\n--- The Veiled Summit ---");
         DelayPrinter.slowPrint(
-                "You enter the heart of Makiling’s forest. The air is cool and heavy, charged with energy. Shadows flicker along your path, and distant lights glow softly, almost as if inviting you onward.\n");
+                "You enter the heart of Makiling's forest. The air is cool and heavy, charged with energy. Shadows flicker along your path, and distant lights glow softly, almost as if inviting you onward.\n");
 
         printMiniEvents(miniEvents);
 
@@ -453,7 +458,7 @@ class Path3 extends Path {
                 "The chamber changes, showing illusions of your fears and doubts. Crystal walls reflect pieces of past mistakes and worries.");
         DelayPrinter.slowPrint("1. Confront the illusions directly.");
         DelayPrinter.slowPrint("2. Study patterns carefully to avoid danger.");
-        DelayPrinter.slowPrint("3. Seek guidance from the guardian spirit’s whispers.");
+        DelayPrinter.slowPrint("3. Seek guidance from the guardian spirit's whispers.");
 
         int perceptionChoice = getInput(3);
 
@@ -545,7 +550,7 @@ class Path3 extends Path {
         else if (score <= 9)
             return "Your bravery and instincts help you face the challenges. You safely find your sister, and the forest honors your courage.";
         else
-            return "Using your intuition, courage, and a kind heart, you face the challenges and succeed. You happily reunite with your sister, and the guardian spirit gives you Makiling’s greatest blessing.";
+            return "Using your intuition, courage, and a kind heart, you face the challenges and succeed. You happily reunite with your sister, and the guardian spirit gives you Makiling's greatest blessing.";
     }
 }
 
@@ -623,7 +628,7 @@ class InteractiveStoryGame {
             System.out.print("\nEnter your name, traveler:\n> ");
             String playerName = input.nextLine();
 
-            DelayPrinter.slowPrint("\nWelcome, " + playerName + ", to the Makiling Adventure Game!");
+            DelayPrinter.slowPrint("\nWelcome " + playerName + " to the Makiling Adventure Game!");
             DelayPrinter
                     .slowPrint("Your journey begins now, through the mysterious and enchanted forest of Makiling...\n");
 
