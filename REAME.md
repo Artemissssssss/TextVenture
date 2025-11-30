@@ -1,4 +1,12 @@
-# 🌟 TextVenture – Java (OOP Project)
+<div align="center">
+    
+# ︵‿︵‿୨TextVenture ୧‿︵‿︵
+
+---
+
+Time to take an adventure through text.
+
+</div>
 
 ## 📌 Overview
 
